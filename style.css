@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    background-color: #0B2434;
+    height: 100vh;
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #F5F5F5;
+    height: 400px;
+    max-width: 800px;
+    border-radius: 5px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.die-face {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.die-num {
+    font-size: 2rem;
+}
+
+.roll-dice,
+.change-language {
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+}
+
+.roll-dice {
+    height: 35px;
+    width: 150px;
+}
+
+.change-language {
+    height: 30px;
+    width: 50px;
+}
+
+.roll-dice:focus,
+.change-language:focus {
+    outline: none;
+}
+
+.roll-dice:active,
+.change-language:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.timerLanguage-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+@media(max-width:480px) {
+    main {
+        height: 95vh;
+    }
+    
+    .timerLanguage-container {
+        flex-direction: column;
+    }
+    
+    .dice-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }  
+    
+}
+
+@media(max-width: 276px){
+    .rolls-attempts {
+        margin-block: 5px;
+        text-align: center
+    }
+    
+    .rolls-best {
+        margin-block: 5px;
+    }
+    .instructions{
+        margin-block: 5px;
+    }
+    
+    .dice-container{
+        margin-block: 10px;
+    }
+}
